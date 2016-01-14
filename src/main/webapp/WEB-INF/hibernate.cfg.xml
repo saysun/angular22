@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+   <!-- Database connection settings -->
+   <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+   <property name="connection.url">jdbc:mysql://localhost:3306/hibernateTutorials</property>
+   <property name="connection.username">root</property>
+   <property name="connection.password"></property>
+   
+   <!-- JDBC connection pool Iuse the built-in) -->
+   <property name="connection.pool_size">1</property>
+   
+   <!-- SQL Dialect -->
+   <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+   
+   <!-- Echo all executed SQL to stdout -->
+   <property name="show_sql">true</property>
+	
+   <!-- Drop the existing tables and create new one -->
+   <property name="hbm2ddl.auto">create</property>
+
+   <!-- mention here all the model classes along with their package name -->
+   <mapping class="com.aysun.controller.Student_Info"/>
+
+</session-factory>
+</hibernate-configuration>
